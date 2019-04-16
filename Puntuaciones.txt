@@ -1,0 +1,1 @@
+Ahorcado [fecha=null, Palabra=otorrino, Nombre del jugador=Raimundo]
