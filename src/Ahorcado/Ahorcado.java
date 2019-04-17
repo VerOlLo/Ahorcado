@@ -111,13 +111,13 @@ public class Ahorcado {
 
 	@Override
 	public String toString() {
-		return "   Errores= "+intentos+ ", Palabra= " + palabraJ2 + ", Nombre del jugador= " + nombreJ1 + "\n";
+		return "   Errores= "+errores+ ", Palabra= " + palabraJ2 + ", Nombre del jugador= " + nombreJ1 + "\n";
 
 	}
 
 	private void Gpuntuaciones() {
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter("Puntuaciones.txt", true));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("Ganadores.txt", true));
 			writer.write(toString());
 			writer.close();
 		} catch (IOException e) {

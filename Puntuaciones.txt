@@ -1,1 +1,1 @@
-   Errores= false, Palabra= javascript, Nombre del jugador= Vero
+   Errores= 1, Palabra= pelicula, Nombre del jugador= Vero
