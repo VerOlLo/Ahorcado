@@ -1,0 +1,4 @@
+Ahorcado [Palabra=angustia, Nombre del jugador=Antonio]
+Ahorcado [Palabra=pesadilla, Nombre del jugador=Celeste]
+Ahorcado [Palabra=otorrinolaringolo, Nombre del jugador=Vero]
+Ahorcado [Palabra=javascript, Nombre del jugador=Carmen]
