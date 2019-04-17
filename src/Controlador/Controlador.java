@@ -7,7 +7,7 @@ public class Controlador {
 	
 	public void inicio() {
 		
-		 VentanaBienvenida may= new VentanaBienvenida();
+		 VentanaBienvenida v= new VentanaBienvenida();
 
 		
 	}

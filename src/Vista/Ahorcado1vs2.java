@@ -23,11 +23,11 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 
 
-public class AhorcadoInterfaz extends JFrame {
+public class Ahorcado1vs2 extends JFrame {
 
 	private Ahorcado juego;
 	private JButton[] letters = new JButton[27];
@@ -42,12 +42,14 @@ public class AhorcadoInterfaz extends JFrame {
 	/**
 	 * Creates new form AhorcadoInterfaz
 	 */
-	public AhorcadoInterfaz() {
+	public Ahorcado1vs2() {
 		initComponents();
 		gestionBarra();
 		gestionLetras();
 		this.setTitle("El Ahorcado"); //Nombre de la ventana
 		this.setSize(1000, 1000);
+		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage();
+        setIconImage(iconoV);
 		//JPanel contentPane = new JPanel();
 		//contentPane.setBackground(new Color(47, 79, 79));
 		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -140,7 +142,7 @@ public class AhorcadoInterfaz extends JFrame {
 			public void actionPerformed(ActionEvent ev) {
 				if(ev.getSource() == nuevo) {
 					/*Visualizamos la ventana "Nuevo Juego"*/
-					AhorcadoInterfaz p = new AhorcadoInterfaz();
+					Ahorcado1vs2 p = new Ahorcado1vs2();
 					p.setVisible(true);
 					dispose();
 				}				
@@ -182,12 +184,12 @@ public class AhorcadoInterfaz extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent ev) {
 				/*Visualizamos otra ventana al dar "Acerca de"*/
-				//VerCreditos opcion = new VerCreditos();
+				VerCreditos opcion = new VerCreditos();
 				//Métodos para visualizar los datos del juego
-				//opcion.verCreadores();
-				//opcion.datosJuego();
+				opcion.verCreadores();
+				opcion.datosJuego();
 				
-				//opcion.setVisible(true);
+				opcion.setVisible(true);
 				dispose();
 			}
 		});
@@ -252,7 +254,7 @@ public class AhorcadoInterfaz extends JFrame {
 		//jPanel1.setLayout(new BorderLayout());
 
 		//Imágenes Ahorcado
-		ahorcado.setIcon(new ImageIcon(getClass().getResource("/imagenes/ahorcado_6.png"))); 
+		ahorcado.setIcon(new ImageIcon(getClass().getResource("/imagenes/ahorcado_0.png"))); 
 		//jLabel1.setSize(50,50);
 		ahorcado.setHorizontalAlignment(JLabel.CENTER);
 		gbcons.gridx=0; //Indica la posición del componente en el eje x (horizontal)

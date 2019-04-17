@@ -49,9 +49,11 @@ public class VentanaBienvenida extends JFrame {
 	public VentanaBienvenida() {
 		setFont(new Font("Cooper Black", Font.PLAIN, 15));
 		setTitle("El ahorcado");
-		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaBienvenida.class.getResource("/imagenes/ahorcadobienvenida.png")));
+		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage();
+        setIconImage(iconoV);
+		this.setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(500, 500, 982, 550);
+		setBounds(500, 500, 1200, 800);
 		this.setLocationRelativeTo(null);
 		//
 		contentPane = new JPanel();
@@ -59,39 +61,43 @@ public class VentanaBienvenida extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblTitulo = new JLabel("Bienvenid@");
-		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitulo.setFont(new Font("Sitka Banner", Font.PLAIN, 42));
-		lblTitulo.setForeground(new Color(0, 255, 255));
-		lblTitulo.setBounds(336, 80, 333, 76);
+		JLabel lblTitulo = new JLabel("");
+		lblTitulo.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/imagenes/titulo.png")));
+		lblTitulo.setBounds(20, -200, 1000,800);
 		contentPane.add(lblTitulo);
 		
 		JCheckBox chckbxSonido = new JCheckBox("Sonido");
 		chckbxSonido.setBackground(SystemColor.activeCaptionBorder);
-		chckbxSonido.setBounds(832, 456, 72, 25);
+		chckbxSonido.setBounds(1050, 700, 72, 25);
 		contentPane.add(chckbxSonido);
 		
-		JButton btnComenzar = new JButton("Comenzar");
+		JButton btnComenzar = new JButton("");
 		btnComenzar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				AhorcadoInterfaz j2 = new AhorcadoInterfaz();
+				Ahorcado1vs2 j2 = new Ahorcado1vs2();
 				j2.setVisible(true);
 				dispose();
 			}
 		});
-		btnComenzar.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/imagenes/button_comenzar.png")));
-		btnComenzar.setBounds(376, 327, 254, 62);
+		
+		
+		btnComenzar.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/imagenes/button_comenzar1.png")));
+		btnComenzar.setBounds(450, 450, 260, 200);
+		btnComenzar.setOpaque(false);
+		btnComenzar.setContentAreaFilled(false);
+		btnComenzar.setBorderPainted(false);
+		btnComenzar.setBorder(null);
 		contentPane.add(btnComenzar);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/gifs/hanging.gif")));
-		lblNewLabel.setBounds(0, 0, 982, 550);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/gifs/ahorcadoFondo.gif")));
+		lblNewLabel.setBounds(0, 0, 1200, 800);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/gifs/ahorcado.gif")));
-		lblNewLabel_1.setBounds(445, 176, 85, 62);
-		contentPane.add(lblNewLabel_1);
+		//JLabel lblNewLabel_1 = new JLabel("New label");
+		//lblNewLabel_1.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/gifs/ahorcado.gif")));
+		//lblNewLabel_1.setBounds(445, 176, 85, 62);
+		//contentPane.add(lblNewLabel_1);
 		
 		setVisible(true);
 	}
