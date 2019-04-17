@@ -111,7 +111,7 @@ public class Ahorcado {
 
 	@Override
 	public String toString() {
-		return "Ahorcado [Palabra=" + palabraJ2 + ", Nombre del jugador=" + nombreJ1 + "]\n";
+		return "Palabra=" + palabraJ2 + ", Nombre del jugador=" + nombreJ1 + "\n";
 
 	}
 
