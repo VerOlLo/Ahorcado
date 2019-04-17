@@ -48,7 +48,7 @@ public class VentanaBienvenida extends JFrame {
 			
 	public VentanaBienvenida() {
 		setFont(new Font("Cooper Black", Font.PLAIN, 15));
-		setTitle("El ahorcado");
+		setTitle("El Ahorcado");
 		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage();
         setIconImage(iconoV);
         this.setResizable(false);

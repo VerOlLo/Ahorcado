@@ -40,7 +40,7 @@ public class VentanaPuntuaciones extends JFrame {
 
 	public VentanaPuntuaciones() {
 
-		super("El Ahorcado");
+		super("   El Ahorcado\n");
 		setSize(1200, 1000);
 		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage();
         setIconImage(iconoV);
@@ -142,8 +142,6 @@ public class VentanaPuntuaciones extends JFrame {
 		textArea.setBounds(313, 358, 500, 200);
 		getContentPane().add(textArea);
 		contentPane.add(textArea);
-
-		
 		
 		this.setVisible(true);
 
@@ -161,8 +159,6 @@ public class VentanaPuntuaciones extends JFrame {
 		}catch (Exception ex) {
 			Logger.getLogger(VentanaPuntuaciones.class.getName()).log(Level.SEVERE, null, ex);
 		}
-		
-	
 		
 	
 	}

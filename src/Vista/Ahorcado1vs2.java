@@ -37,29 +37,21 @@ public class Ahorcado1vs2 extends JFrame {
 	private JTextField jTextFP;
 	private String letrap;
 	
-	//private Image fondo;
 
-	/**
-	 * Creates new form AhorcadoInterfaz
-	 */
 	public Ahorcado1vs2() {
 		initComponents();
-		gestionBarra();
-		gestionLetras();
+		gestionBarra(); //Gestiona el menú de la ventana
+		gestionLetras(); //Gestiona el teclado
 		this.setTitle("El Ahorcado"); //Nombre de la ventana
 		this.setSize(1000, 1000);
 		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage(); //Cambia el icono de la ventana
         setIconImage(iconoV);
-		//JPanel contentPane = new JPanel();
-		//contentPane.setBackground(new Color(47, 79, 79));
-		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		//setContentPane(contentPane);
 		this.setLocationRelativeTo(null);//Centra la ventana
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);// El programa se cierra del todo, se borra de las tareas del ordenador
-		//this.getContentPane().setLayout(new GridBagLayout());
 		
 		
-		 //Listener
+		
+		 //Si el juego está iniciado
        
 		ActionListener listener = (ActionEvent e) -> {
             if(juego!=null){
@@ -73,7 +65,7 @@ public class Ahorcado1vs2 extends JFrame {
         
 	
 	
-	
+	//Creación del teclado de la pantalla y su comportamiento
     	private void gestionLetras() {
     		jPanel3.setLayout(new GridLayout(6, 5));
     	
@@ -201,9 +193,7 @@ public class Ahorcado1vs2 extends JFrame {
 	}
 	
 	private void initComponents() {
-		
-
-		
+				
 		jPanel3 = new JPanel();
 		ahorcado = new JLabel();
 		tPalabra = new JLabel();
@@ -229,7 +219,7 @@ public class Ahorcado1vs2 extends JFrame {
 		titulo.setText("1 vs 2");
 	
 
-		//Imágenes Ahorcado
+		//Donde se situa la imagen del ahorcado
 		ahorcado.setIcon(new ImageIcon(getClass().getResource("/imagenes/ahorcado_0.png"))); 
 		//jLabel1.setSize(50,50);
 		ahorcado.setHorizontalAlignment(JLabel.CENTER);

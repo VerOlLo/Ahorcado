@@ -71,7 +71,7 @@ public class VerCreditos extends JFrame {
 		p1.setLayout(new FlowLayout(FlowLayout.CENTER,16,3));
 		p1.setLayout(new GridLayout(2,5));
 		getContentPane().add(p1);
-		DAM = new JLabel("Un juego creado por 3 alumnos de 1º DAM");
+		DAM = new JLabel("Un juego creado por los alumnos de 1º DAM:");
 		DAM.setFont(f1);
 		getContentPane().add(DAM);
 		p1.add(DAM);

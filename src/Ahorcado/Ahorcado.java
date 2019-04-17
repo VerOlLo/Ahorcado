@@ -16,13 +16,12 @@ import javax.swing.JTextField;
 public class Ahorcado {
 	private JTextField jTextField;
 	private JLabel jLabel2;
-	private int intentos = 0;
+	private int errores = 0;
 	private boolean juegoActivo = false;
-	// private boolean ganado = false;
-	private boolean errores = false;
+	private boolean intentos = false;
 	private char[] pElegida;
 	private char[] palabra;
-	private String fecha;
+	//private String fecha;
 	private String palabraJ2;
 	private String nombreJ1;
 
@@ -54,36 +53,37 @@ public class Ahorcado {
 	}
 
 	public void analizar(char l) {
-		if (juegoActivo) {  //Si el juego está activo
+		if (juegoActivo) {  //Si el juego está activo, por lo que el botón comenzar ha sido pulsado
 			String sLetra = "";  
 
-			if (intentos == 6) {
+			if (errores == 5) {
 				JOptionPane.showMessageDialog(null, "Perdiste");
-				Date hoy = new Date(); //Esto quiero conservarlo
-				DateFormat fechaH = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy"); //Esto quiero conservarlo
-				fecha = fechaH.format(hoy); //Esto quiero conservarlo. Me hace falta para el ranking
+				jLabel2.setIcon(new ImageIcon(getClass().getResource("/imagenes/ahorcado_6.png")));
+				//Date hoy = new Date(); 
+				//DateFormat fechaH = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy"); 
+				//fecha = fechaH.format(hoy); 
 			} else {
 
 				for (int i = 0; i <= pElegida.length - 1; i++) {
 
 					if (pElegida[i] == l) {
-						System.out.println("exito");
+						System.out.println(pElegida[i]+"- Letra acertada");
 						palabra[i] = l;
-						errores = true;
+						intentos = true;
 					}
 					sLetra = sLetra + this.palabra[i];
 				}
 
-				if (errores == false) {
-					intentos += 1;
-
+				if (intentos == false) {
+					errores += 1;
 					jLabel2.setIcon(
-							new ImageIcon(getClass().getResource("/imagenes/ahorcado_" + intentos + ".png")));
-					if (this.intentos < 6) {
-						JOptionPane.showMessageDialog(null, (6 - intentos) + " intentos restantes","Mal",JOptionPane.WARNING_MESSAGE);
+					new ImageIcon(getClass().getResource("/imagenes/ahorcado_" + errores + ".png")));
+					
+					if (this.errores < 6) {
+						JOptionPane.showMessageDialog(null, (6 - errores) + " intentos restantes","Pruebe otra letra:",JOptionPane.WARNING_MESSAGE);
 					}
 				} else {
-					this.errores = false;
+					this.intentos = false;
 				}
 				this.jTextField.setText(sLetra);
 				ganar();
@@ -103,7 +103,7 @@ public class Ahorcado {
 			}
 		}
 		if (ganador) {
-			JOptionPane.showMessageDialog(null, "¡Ganaste!");
+			JOptionPane.showMessageDialog(null, "¡Ganaste!","¡Enhorabuena!",JOptionPane.INFORMATION_MESSAGE);
 			Gpuntuaciones();
 
 		}
@@ -111,7 +111,7 @@ public class Ahorcado {
 
 	@Override
 	public String toString() {
-		return "Palabra=" + palabraJ2 + ", Nombre del jugador=" + nombreJ1 + "\n";
+		return "   Errores= "+intentos+ ", Palabra= " + palabraJ2 + ", Nombre del jugador= " + nombreJ1 + "\n";
 
 	}
 
