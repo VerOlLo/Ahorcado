@@ -1,0 +1,1 @@
+   Errores= false, Palabra= javascript, Nombre del jugador= Vero
