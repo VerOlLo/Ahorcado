@@ -95,10 +95,7 @@ public class VentanaBienvenida extends JFrame {
 		lblNewLabel.setBounds(0, 0, 1200, 800);
 		contentPane.add(lblNewLabel);
 		
-		//JLabel lblNewLabel_1 = new JLabel("New label");
-		//lblNewLabel_1.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/gifs/ahorcado.gif")));
-		//lblNewLabel_1.setBounds(445, 176, 85, 62);
-		//contentPane.add(lblNewLabel_1);
+		
 		
 		setVisible(true);
 	}
