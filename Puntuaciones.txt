@@ -1,7 +1,0 @@
-Ahorcado [fecha=null, Palabra=otorrino, Nombre del jugador=Raimundo]
-Ahorcado [fecha=null, Palabra=papeleta, Nombre del jugador=Vero]
-Ahorcado [fecha=null, Palabra=hospital, Nombre del jugador=Vero]
-Ahorcado [fecha=null, Palabra=mariposa, Nombre del jugador=Javier]
-Ahorcado [fecha=null, Palabra=papel, Nombre del jugador=Vero]
-Ahorcado [fecha=null, Palabra=java, Nombre del jugador=Carmen]
-Ahorcado [fecha=null, Palabra=venganza, Nombre del jugador=Mary]

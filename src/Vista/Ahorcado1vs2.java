@@ -48,7 +48,7 @@ public class Ahorcado1vs2 extends JFrame {
 		gestionLetras();
 		this.setTitle("El Ahorcado"); //Nombre de la ventana
 		this.setSize(1000, 1000);
-		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage();
+		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage(); //Cambia el icono de la ventana
         setIconImage(iconoV);
 		//JPanel contentPane = new JPanel();
 		//contentPane.setBackground(new Color(47, 79, 79));

@@ -51,7 +51,8 @@ public class VentanaBienvenida extends JFrame {
 		setTitle("El ahorcado");
 		Image iconoV = new ImageIcon(getClass().getResource("/imagenes/ahorcadobienvenida.png")).getImage();
         setIconImage(iconoV);
-		this.setResizable(false);
+        this.setResizable(false);
+        this.
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(500, 500, 1200, 800);
 		this.setLocationRelativeTo(null);
@@ -61,7 +62,7 @@ public class VentanaBienvenida extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblTitulo = new JLabel("");
+		JLabel lblTitulo = new JLabel();
 		lblTitulo.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/imagenes/titulo.png")));
 		lblTitulo.setBounds(20, -200, 1000,800);
 		contentPane.add(lblTitulo);

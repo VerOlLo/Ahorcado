@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -22,6 +24,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -120,65 +123,45 @@ public class VentanaPuntuaciones extends JFrame {
 
 	
 
-		titulo = new JLabel("Puntuaciones");
+		titulo = new JLabel();
+		titulo.setIcon(new ImageIcon(VentanaBienvenida.class.getResource("/imagenes/ganadores.png")));
 		titulo.setSize(400, 400);
-		titulo.setLocation(540, 0);
+		titulo.setLocation(390, 70);
 		titulo.setForeground(Color.WHITE);
 		titulo.setVisible(true);
 		contentPane.add(titulo);
 
-		textArea = new JTextArea();
+		textArea = new JTextArea(10,2);
+		textArea.setText(getName());
+		textArea.setText(getTitle());
 		textArea.setEditable(false);
-		textArea.setBounds(313, 58, 153, 168);
+		JScrollPane scroll = new JScrollPane(); 
+		scroll.setViewportView(textArea);
+		textArea.setBounds(313, 358, 500, 200);
 		getContentPane().add(textArea);
 		contentPane.add(textArea);
-		
-		
-		lista = new JList();
-		String []listado=new String[8];
-		listado[0]="1º";
-		listado[1]="2º";
-		listado[2]="3º";
-		listado[3]="4º";
-		listado[4]="5º";
-		listado[5]="6º";
-		listado[6]="7º";
-		listado[7]="8º";
-		listado[8]="9º";
-		listado[9]="10º";
-		lista.setBounds(45, 58, 143, 168);
-		getContentPane().add(lista);
-		lista.setModel(new DefaultComboBoxModel(listado));
+
 		
 		this.setVisible(true);
 
-	}
-
 	
-	
-	public void mostrarDatos(String nombreFichero) throws IOException{
-		String lee=null;
-		File txt = new File("ranking.txt");
-		FileReader fr= new FileReader(txt);
-		BufferedReader bf= new BufferedReader(fr);
-		String completo= null;
-		lee = bf.readLine();
 		
+		File ranking =new File("Puntuaciones.txt");
 		
-		
-
 		try {
-			while (lee != null) {
-				textArea.append(lee + "\n");
-				textArea.setText(lee);
-				textArea.setText(textArea.getText()+lee);
-				lee = bf.readLine();
+			BufferedReader lectura = new BufferedReader(new FileReader(ranking));
+			String linea=lectura.readLine();
+			while(linea !=null) {
+				textArea.append(linea+"\n");
+				linea=lectura.readLine();
 			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+		}catch (Exception ex) {
+			Logger.getLogger(VentanaPuntuaciones.class.getName()).log(Level.SEVERE, null, ex);
 		}
-			}
+		
+	
 		
 	
 	}
+}
 
