@@ -209,19 +209,8 @@ public class Ahorcado1vs2 extends JFrame {
 		tPalabra = new JLabel();
 		jTextFP = new JTextField();
 		jBComenzar = new JButton();
-		
-		
-		
-		//JLabel fondo = new JLabel();
-		//setContentPane(fondo);
-		
-		//ImageIcon imagenf = new ImageIcon("imagenes/fondo.png");
-		//fondo.setIcon(imagenf);
-		//fondo.setSize(imagenf.getIconWidth(),imagenf.getIconHeight());
-		
-		//JLabel encima = new JLabel();
-		//encima.setSize(200,200);
-		
+				
+					
 		//Título de la ventana
 		titulo = new JLabel();
 		titulo.setFont(new Font("Cooper Black",Font.BOLD,75));
@@ -238,20 +227,7 @@ public class Ahorcado1vs2 extends JFrame {
 		gbcons.anchor= GridBagConstraints.CENTER;
 		this.getContentPane().add(titulo,gbcons); //Le asigna los atributos al componente titulo
 		titulo.setText("1 vs 2");
-		//titulo.setBounds(20,10,300,100); //Ubicación dentro del Frame
-		
-		//Borde1
-		//jPanel1.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
-		//gbcons.gridx=0; //Indica la posición del componente en el eje x (horizontal)
-		//gbcons.gridy=2; //Indica la posición del componenete en el eje y (vertical)
-		//gbcons.gridwidth=0; //Indica cuantas columnas va a ocupar
-		//gbcons.gridheight=1; //Indica cuantas filas va a ocupar
-		//gbcons.weightx = 1.0; //Indica la relación en la que el componente se adaptará al tamaño (eje horizontal)
-		//gbcons.weighty = 1.0; //Indica la relación en la que el componente se adaptará al tamaño (eje vertical)
-		//gbcons.fill = GridBagConstraints.BOTH;//Los componentes crecen
-		//gbcons.anchor= GridBagConstraints.CENTER;
-		//this.getContentPane().add(jPanel1,gbcons);
-		//jPanel1.setLayout(new BorderLayout());
+	
 
 		//Imágenes Ahorcado
 		ahorcado.setIcon(new ImageIcon(getClass().getResource("/imagenes/ahorcado_0.png"))); 
@@ -267,22 +243,10 @@ public class Ahorcado1vs2 extends JFrame {
 		gbcons.anchor= GridBagConstraints.EAST;
 		this.getContentPane().add(ahorcado, gbcons);
 		
-		//Borde 2
-		//jPanel2.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
-		//gbcons.gridx=3; //Indica la posición del componente en el eje x (horizontal)
-		//gbcons.gridy=3; //Indica la posición del componenete en el eje y (vertical)
-		//gbcons.gridwidth=0; //Indica cuantas columnas va a ocupar
-		//gbcons.gridheight=1; //Indica cuantas filas va a ocupar
-		//gbcons.weightx = 1.0; //Indica la relación en la que el componente se adaptará al tamaño (eje horizontal)
-		//gbcons.weighty = 1.0; //Indica la relación en la que el componente se adaptará al tamaño (eje vertical)
-		//gbcons.fill = GridBagConstraints.BOTH;//Los componentes crecen
-		//gbcons.anchor= GridBagConstraints.CENTER;
-		//this.getContentPane().add(jPanel2,gbcons);
-		//jPanel2.setLayout(new GridBagLayout());
-
 			
 		//Etiqueta título para la palabra
 		tPalabra.setText("Adivina la palabra:");
+		tPalabra.setFont(new Font("Cooper Black",Font.BOLD,25));
 		tPalabra.setHorizontalAlignment(JLabel.CENTER);
 		gbcons.gridx=1; //Indica la posición del componente en el eje x (horizontal)
 		gbcons.gridy=2; //Indica la posición del componenete en el eje y (vertical)
@@ -348,7 +312,7 @@ public class Ahorcado1vs2 extends JFrame {
 		
 				
 		this.setVisible(true);
-		//pack(); //Para que todo se adapte
+		pack(); //Para que todo se adapte
 
 	}
 

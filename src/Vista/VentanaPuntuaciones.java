@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -135,12 +136,14 @@ public class VentanaPuntuaciones extends JFrame {
 		textArea.setText(getName());
 		textArea.setText(getTitle());
 		textArea.setEditable(false);
+		textArea.setBorder(BorderFactory.createLineBorder(Color.red)); 
 		JScrollPane scroll = new JScrollPane(); 
 		scroll.setViewportView(textArea);
 		textArea.setBounds(313, 358, 500, 200);
 		getContentPane().add(textArea);
 		contentPane.add(textArea);
 
+		
 		
 		this.setVisible(true);
 
